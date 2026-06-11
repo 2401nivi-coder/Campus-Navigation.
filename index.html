@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivekanandha Campus Navigation</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Vivekanandha Campus Navigation</h1>
+  <button id="sidebarToggle">&#9776;</button>
+</header>
+
+<div class="container">
+  <aside id="sidebar">
+    <div class="category-buttons">
+      <button class="category-btn" data-category="All">All</button>
+      <button class="category-btn" data-category="Hostel">Hostels</button>
+      <button class="category-btn" data-category="Canteen">Canteens</button>
+      <button class="category-btn" data-category="Department">Departments</button>
+      <button class="category-btn" data-category="Library">Library</button>
+      <button class="category-btn" data-category="Washroom">Washrooms</button>
+      <button class="category-btn" data-category="College">Colleges</button>
+      <button class="category-btn" data-category="Shop">Shops</button>
+       <button class="category-btn" data-category="Stadium">Stadium</button>
+       <button class="category-btn" data-category="Transport">Transport office</button>
+       <button class="category-btn" data-category="Auditorium">Auditorium</button>
+    </div>
+
+    <div class="place-list"></div>
+
+    <div class="search-container">
+      <input type="text" id="searchBox" placeholder="Search for a place...">
+      <button id="searchBtn">Search</button>
+    </div>
+  </aside>
+
+  <main>
+    <div id="map"></div>
+  </main>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

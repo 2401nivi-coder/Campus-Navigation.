@@ -1,0 +1,93 @@
+body, html {
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family:sans-serif;
+    background:#f0f2f5;
+}
+
+header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px;
+    background:#041d3e;
+    color:white;
+}
+header .logo { height:50px; }
+header h1 { flex-grow:1; margin-left:10px; font-size:1.2rem; }
+#sidebarToggle {
+    display:none;
+    font-size:24px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+.container {
+    display:flex;
+    height: calc(100vh - 80px);
+}
+
+aside {
+    width:250px;
+    background:#e9ecef;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    transition: transform 0.3s ease;
+}
+
+.category-buttons {
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+    margin-bottom:10px;
+}
+.category-btn {
+    flex:1 1 48%;
+    padding:6px;
+    border:none;
+    border-radius:4px;
+    background:#052444;
+    color:white;
+    cursor:pointer;
+}
+.category-btn:hover { background:#042345; }
+
+.place-list { flex-grow:1; overflow-y:auto; margin-bottom:10px; }
+.place-list button {
+    width:100%;
+    margin-bottom:3px;
+    padding:6px;
+    border:1px solid #09223e;
+    border-radius:4px;
+    background:white;
+    cursor:pointer;
+}
+.place-list button:hover { background:#dbe9ff; }
+
+.search-container { display:flex; margin-bottom:10px; }
+#searchBox { flex:1; padding:6px; border-radius:4px 0 0 4px; border:1px solid #062343; }
+#searchBtn { padding:6px 12px; border:none; border-radius:0 4px 4px 0; background:#04182e; color:white; cursor:pointer; }
+
+#map { flex-grow:1; height:100%; }
+
+main { flex-grow:1; height:100%; }
+
+/* Responsive for mobile */
+@media(max-width:768px){
+    aside {
+        position: absolute;
+        z-index:1000;
+        left:-260px;
+        top:80px;
+        height: calc(100vh - 80px);
+        width:250px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+        background:#e9ecef;
+    }
+    aside.show { transform: translateX(260px); }
+    #sidebarToggle { display:block; }
+}
